@@ -39,7 +39,10 @@ header .header-top-mobile {
 }
 
 header .header-top-mobile .logo {
-  cursor: pointer;
+  background-image: url("/assets/logo-mobile.svg");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 32.78px;
 }
 
 header .header-top-mobile .navigation {
@@ -130,8 +133,73 @@ main .image img {
   top: 5px;
 }
 
-@media (min-width:360px) {
-  main .title h2{
+@media (min-width: 1024px) {
+  header {
+    width: 85vw;
+    max-width: 918px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.5fr;
+    grid-template-rows: auto;
+    grid-template-areas: "main main button";
+    gap: 12rem;
+
+    margin-top: 5rem;
+    margin-inline: auto;
+  }
+
+  header p {
+    display: none;
+  }
+
+  header .button {
+    margin: 0;
+    grid-area: button;
+    place-self: center;
+  }
+
+  header .header-top-mobile {
+    padding: 0;
+    border: none;
+    display: inline-flex;
+    grid-area: main;
+    justify-content: space-around;
+    gap: 12rem;
+  }
+
+  header .header-top-mobile .logo {
+    background-image: url("/assets/logo-desktop.svg");
+    width: 5rem;
+    height: 5rem;
+  }
+
+  header .header-top-mobile .menu-burguer {
+    display: none;
+  }
+
+  header .header-top-mobile .navigation {
+    display: block;
+  }
+
+  header .header-top-mobile .navigation ul {
+    list-style: none;
+    display: flex;
+    gap: 3.2rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.9rem;
+    letter-spacing: 0.02em;
+  }
+
+  main .title h2 {
+    font-size: 8rem;
+  }
+}
+
+@media (max-width: 360px) {
+  main .title h2 {
     font-size: 5rem;
   }
 }
