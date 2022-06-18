@@ -22,7 +22,12 @@ body {
   font-size: 1.6rem;
   color: var(--text-color);
 
+  height: 100%;
   background-color: var(--backgrond);
+}
+
+li {
+  cursor: pointer;
 }
 
 header {
@@ -54,7 +59,8 @@ header .header-top-mobile .menu-burguer {
 }
 
 header .text {
-  max-width: 373px;
+  width: 94%;
+  max-width: 580px;
   height: 128px;
 
   font-weight: 600;
@@ -92,6 +98,7 @@ header .button {
 
 main {
   width: 95vw;
+  height: 100%;
 
   display: flex;
   flex-direction: column;
@@ -126,14 +133,24 @@ main .title h2:last-child::after {
   content: "/>";
 }
 
+main .image {
+  margin: 0 auto;
+}
+
 main .image img {
+  text-align: center;
   position: relative;
-  height: 100%;
   width: 100%;
+  max-width: 798.78px;
+  height: 100%;
+
   top: 5px;
 }
 
 @media (min-width: 1024px) {
+  html {
+    height: 100%;
+  }
   header {
     width: 85vw;
     max-width: 918px;
@@ -192,13 +209,15 @@ main .image img {
     line-height: 1.9rem;
     letter-spacing: 0.02em;
   }
+}
 
+@media (min-width: 660px) {
   main .title h2 {
     font-size: 8rem;
   }
 }
 
-@media (max-width: 360px) {
+@media (min-width: 360px) and (max-width: 660px) {
   main .title h2 {
     font-size: 5rem;
   }
